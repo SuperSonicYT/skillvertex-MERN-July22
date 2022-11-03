@@ -1,0 +1,27 @@
+link(rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous")
+nav.navbar.navbar-expand-lg.navbar-light.bg-light
+  a.navbar-brand(href='#') 
+    img(src="/static/Zoom_Blue_Logo.png", alt="", srcset="")
+  button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarSupportedContent', aria-controls='navbarSupportedContent', aria-expanded='false', aria-label='Toggle navigation')
+    span.navbar-toggler-icon
+  
+  .collapse.navbar-collapse(id='navbarSupportedContent')
+    ul.navbar-nav.mr-auto
+      li.nav-item.active
+        a.nav-link(href='#') Home
+      li.nav-item
+        a.nav-link(href='/food-courts') Food Courts
+      li.nav-item
+        a.nav-link(href='/parking') Parking
+      li.nav-item
+        a.nav-link(href='/places') Places
+    ul.navbar-nav.float-right
+      li.nav-item
+        a.nav-link(href='/login') Login
+      li.nav-item.dropdown
+        a.nav-link.dropdown-toggle(id='navbarDropdownMenuLink', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false') Accounts
+        .dropdown-menu(aria-labelledby='navbarDropdownMenuLink')
+          a.dropdown-item(href='#') Settings
+          
+ 
+  

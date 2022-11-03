@@ -1,0 +1,5 @@
+Callback is an asynchronous equivalent for a function.
+A callback function is called at the completion of a given task.
+All the APIs of Node are written in such a way that they support callbacks.
+The File I/O does not block the thread. 
+Callbacks make Node.js highly scalable, as it can process a high number of requests without waiting for any function to return results.
