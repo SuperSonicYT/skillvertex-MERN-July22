@@ -1,13 +1,15 @@
 section#header
   a(href='legal/privacy.html') Privacy Policy
   a(href='legal/tnc.html') Terms and Conditions
-  #dropdown
-    button LOGIN
-    #dropdown-content
-      a(href='authentication/login.php') Login into existing account
-      a(href='authentication/register.php') Create a new account
-  #dropdown
-    button
-    #dropdown-content
-      a(href='authentication/changepwd.php') Change passowrd
-      a(href='index.php?logout=true') Logout
+  if(!username)
+    #dropdown
+      button LOGIN
+      #dropdown-content
+        a(href='authentication/login') Login into existing account
+        a(href='authentication/register') Create a new account
+  else
+    #dropdown
+      button #{username}
+      #dropdown-content
+        a(href='authentication/changepwd') Change passowrd
+        a(href='index.php?logout') Logout

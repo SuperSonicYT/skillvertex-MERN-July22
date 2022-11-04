@@ -18,6 +18,13 @@ app.set('view engine','pug');
 app.set('views','./views');
 
 
+
+
+
+
+var authentication = require('./authentication.js');
+app.use('/authentication',authentication);
+
 app.get('/', function(req,res) {
     res.render("index");
 });
