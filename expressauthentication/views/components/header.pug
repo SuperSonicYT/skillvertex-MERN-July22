@@ -6,10 +6,10 @@ section#header
       button LOGIN
       #dropdown-content
         a(href='authentication/login') Login into existing account
-        a(href='authentication/register') Create a new account
+        a(href='authentication/signup') Create a new account
   else
     #dropdown
       button #{username}
       #dropdown-content
         a(href='authentication/changepwd') Change passowrd
-        a(href='index.php?logout') Logout
+        a(href='/logout?logout=true') Logout

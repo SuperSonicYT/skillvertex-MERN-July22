@@ -1,0 +1,59 @@
+doctype html
+html
+    head
+        meta(charset='UTF-8')
+        meta(http-equiv='X-UA-Compatible' content='IE=edge')
+        meta(name='viewport' content='width=device-width, initial-scale=1.0')
+        title Document
+        style.
+            #container {
+            width: 50%;
+            border: 3px solid gray;
+            position: absolute;
+            top: 10%;
+            padding: 0;
+            transform: translateY(-50%);
+            transform: translateX(50%);
+            }
+            #form-header {
+            background-color: cornflowerblue;
+            margin: 0;
+            position: static;
+            text-align: center;
+            }
+            #form-header h2,h4 {
+            margin: 0px;
+            padding: 10px;
+            color: white;
+            }
+            #form {
+            position: relative;
+            text-align: center;
+            }
+            #form input {
+            width: 90%;
+            padding: 10px;
+            border: 1px solid gray;
+            margin-top: 20px;
+            }
+            #form input[type="submit"] {
+            width: 40%;
+            background-color: cornflowerblue;
+            color: white;
+            margin: 20px;
+            }
+    body 
+        div#container
+            div#form-header
+                h2 Create a new account
+                h4 It's quick and easy.
+            form#form(method='post' action='')
+                if(errormsg) 
+                    label(style='color:red') #{errormsg}
+                input(type='text' name='name' placeholder='Enter your name' required)
+                input(type="number", name='age' placeholder='Enter your age' required)
+                input(type='email' name='email' placeholder='Enter your email address' required)
+                input(type='text' name='nationality' placeholder='Enter your nationality' required)
+                input(type='password' name='pwd' placeholder='Enter your password' required)
+                input(type='password' name='cpwd' placeholder='Confirm your password' required)
+                input(type='submit' name='submit' value='REGISTER')
